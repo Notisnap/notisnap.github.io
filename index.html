@@ -22,21 +22,23 @@ line-height:1.6;
 }
 
 .hero{
-padding:100px 20px;
+padding:120px 20px;
 text-align:center;
 max-width:900px;
 margin:auto;
 }
 
 .hero h1{
-font-size:3rem;
-margin-bottom:20px;
+font-size:3.4rem;
+line-height:1.15;
+margin-bottom:25px;
+font-weight:700;
 }
 
 .hero p{
-font-size:1.2rem;
+font-size:1.25rem;
 color:#b0b0b0;
-max-width:700px;
+max-width:650px;
 margin:auto;
 }
 
@@ -47,14 +49,22 @@ margin-top:35px;
 .store-btn{
 display:inline-block;
 margin:8px;
-padding:14px 28px;
+padding:16px 30px;
 background:#50C878;
 color:#121212;
 text-decoration:none;
 font-weight:bold;
-border-radius:14px;
+border-radius:16px;
+transition:.25s ease;
 }
 
+.store-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 10px 25px rgba(80,200,120,.35);
+
+}
 .section{
 max-width:1100px;
 margin:auto;
@@ -73,6 +83,20 @@ padding:25px;
 border-radius:18px;
 margin-bottom:20px;
 border:1px solid #2a2a2a;
+}
+
+.card{
+
+transition:.25s ease;
+
+}
+
+.card:hover{
+
+transform:translateY(-6px);
+
+border-color:#50C878;
+
 }
 
 .card h3{
@@ -103,19 +127,77 @@ color:#888;
 
 <section class="hero">
 
-<h1>Never Lose An Important Notification Again</h1>
+<h1>
+Never Lose An Important<br>
+Notification Again
+</h1>
 
 <p>
-Recover missed OTPs, messages and alerts with intelligent notification archiving.
+Your personal notification memory.
+Recover deleted OTPs, messages and alerts whenever you need them.
 </p>
 
 <div class="download-buttons">
 
-<a class="store-btn" href="#">APKPure (Launching Soon on Android)</a>
+<a class="store-btn" href="#">
+APKPure
+<br>
+<small>Launching Soon</small>
+</a>
 
-<a class="store-btn" href="#">Aptoide (Launching Soon on Android)</a>
+<a class="store-btn" href="#">
+Aptoide
+<br>
+<small>Launching Soon</small>
+</a>
 
-<a class="store-btn" href="#">Indus App Store (Launching Soon on Android)</a>
+<a class="store-btn" href="#">
+Indus App Store
+<br>
+<small>Launching Soon</small>
+</a>
+
+<a class="store-btn" href="#">
+Uptodown
+<br>
+<small>Launching Soon</small>
+</a>
+
+</div>
+
+</section>
+
+    <section class="section">
+
+<h2 class="section-title">
+One Swipe. One Mistake.
+</h2>
+
+<div class="card">
+
+<p>
+
+You accidentally dismiss your bank OTP.
+
+<br><br>
+
+You open your notification panel.
+
+<br><br>
+
+It's gone.
+
+<br><br>
+
+Normally, it's lost forever.
+
+<br><br>
+
+<strong style="color:#50C878;">
+NotiSnap already saved it.
+</strong>
+
+</p>
 
 </div>
 
