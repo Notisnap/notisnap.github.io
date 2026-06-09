@@ -58,13 +58,15 @@ border-radius:16px;
 transition:.25s ease;
 }
 
-.store-btn:hover{
+.store-btn:hover,
+.store-btn:active{
 
 transform:translateY(-4px);
 
 box-shadow:0 10px 25px rgba(80,200,120,.35);
 
 }
+    
 .section{
 max-width:1100px;
 margin:auto;
@@ -87,15 +89,21 @@ border:1px solid #2a2a2a;
 
 .card{
 
-transition:.25s ease;
+transition:
+transform .15s ease-out,
+border-color .15s ease-out,
+box-shadow .15s ease-out;
 
 }
-
-.card:hover{
+    
+.card:hover,
+.card:active{
 
 transform:translateY(-6px);
 
 border-color:#50C878;
+
+box-shadow:0 0 20px rgba(80,200,120,.18);
 
 }
 
