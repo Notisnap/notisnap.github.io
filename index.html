@@ -410,6 +410,60 @@ text-decoration:none;
 
 }
 
+.mobile-menu{
+
+display:none;
+
+position:absolute;
+
+top:72px;
+
+right:20px;
+
+background:#1c1c1c;
+
+border:1px solid #2a2a2a;
+
+border-radius:16px;
+
+min-width:180px;
+
+box-shadow:0 12px 30px rgba(0,0,0,.45);
+
+overflow:hidden;
+
+z-index:2000;
+
+}
+
+.mobile-menu a{
+
+display:block;
+
+padding:14px 18px;
+
+text-decoration:none;
+
+color:#b0b0b0;
+
+transition:.15s;
+
+}
+
+.mobile-menu a:hover{
+
+background:#242424;
+
+color:#50C878;
+
+}
+
+.mobile-menu.show{
+
+display:block;
+
+}
+
 </style>
 
 </head>
@@ -465,6 +519,26 @@ aria-label="Menu">
 ☰
 
 </button>
+
+</div>
+
+<div id="mobileMenu" class="mobile-menu">
+
+<a href="privacy.html">
+Privacy
+</a>
+
+<a href="terms.html">
+Terms
+</a>
+
+<a href="#">
+FAQ
+</a>
+
+<a href="#support">
+Support
+</a>
 
 </div>
 
@@ -741,6 +815,34 @@ top:0,
 behavior:"smooth"
 
 });
+
+});
+
+const menuBtn=document.querySelector(".menu-btn");
+
+const mobileMenu=document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("show");
+
+});
+
+document.addEventListener("click",(e)=>{
+
+if(
+
+!mobileMenu.contains(e.target)
+
+&&
+
+!menuBtn.contains(e.target)
+
+){
+
+mobileMenu.classList.remove("show");
+
+}
 
 });
 
