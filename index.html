@@ -152,19 +152,118 @@ padding:50px 20px;
 color:#888;
 }
 
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:18px 30px;
+
+background:#121212;
+
+position:sticky;
+
+top:0;
+
+z-index:1000;
+
+border-bottom:1px solid #222;
+
+}
+
+.nav-left{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+}
+
+.nav-logo{
+
+width:40px;
+
+height:40px;
+
+}
+
+.brand{
+
+font-size:1.3rem;
+
+font-weight:bold;
+
+}
+
+.nav-right{
+
+display:flex;
+
+gap:24px;
+
+}
+
+.nav-right a{
+
+color:#b0b0b0;
+
+text-decoration:none;
+
+transition:.15s;
+
+}
+
+.nav-right a:hover{
+
+color:#50C878;
+
+}
+
 </style>
 
 </head>
 
 <body>
 
-<section class="hero">
+  <header class="navbar">
+
+<div class="nav-left">
 
 <img
 src="assets/NotiSnap_Final_V1.png"
 alt="NotiSnap Logo"
-width="120"
-style="margin-bottom:25px;">
+class="nav-logo">
+
+<span class="brand">
+NotiSnap
+</span>
+
+</div>
+
+<nav class="nav-right">
+
+<a href="privacy.html">
+Privacy
+</a>
+
+<a href="terms.html">
+Terms
+</a>
+
+<a href="#support">
+Support
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
 
 <h1>
 Never Lose An Important<br>
@@ -352,7 +451,7 @@ Before You Install
 
 </section>
 
-<section class="section support">
+<section id="support" class="section support">
 
 <h2 class="section-title">
 Support
