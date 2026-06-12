@@ -350,10 +350,46 @@ gap:18px;
 
 }
 
+.desktop-nav{
+display:flex;
+}
+
+.mobile-nav{
+display:none;
+}
+
 .hero{
 
 padding:70px 20px 120px;
 
+}
+
+}
+
+@media (max-width:768px){
+
+.desktop-nav{
+display:none;
+}
+
+.mobile-nav{
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.menu-btn{
+background:none;
+border:none;
+color:white;
+font-size:28px;
+cursor:pointer;
+padding:0;
+}
+
+.mobile-support{
+color:#b0b0b0;
+text-decoration:none;
 }
 
 }
@@ -379,7 +415,7 @@ NotiSnap
 
 </div>
 
-<nav class="nav-right">
+<nav class="nav-right desktop-nav">
 
 <a href="privacy.html">
 Privacy
@@ -394,6 +430,27 @@ Support
 </a>
 
 </nav>
+
+<div class="mobile-nav">
+
+<a
+class="mobile-support"
+href="#support">
+
+Support
+
+</a>
+
+<button
+class="menu-btn"
+type="button"
+aria-label="Menu">
+
+☰
+
+</button>
+
+</div>
 
 </header>
 
