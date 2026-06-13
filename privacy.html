@@ -544,5 +544,51 @@ NotiSnap does not currently provide cloud backup, synchronization, or export fun
 <a href="index.html">Back to Home</a>
 </p>
 
+<script>
+const menuBtn=document.querySelector(".menu-btn");
+
+const drawer=document.getElementById("mobileDrawer");
+
+const overlay=document.getElementById("drawerOverlay");
+
+const closeBtn=document.getElementById("closeDrawer");
+
+function closeDrawer(){
+
+drawer.classList.remove("show");
+
+overlay.classList.remove("show");
+
+}
+
+function openDrawer(){
+
+drawer.classList.add("show");
+
+overlay.classList.add("show");
+
+}
+
+menuBtn.addEventListener("click",()=>{
+
+if(drawer.classList.contains("show")){
+
+closeDrawer();
+
+}
+
+else{
+
+openDrawer();
+
+}
+
+});
+
+closeBtn.addEventListener("click",closeDrawer);
+
+overlay.addEventListener("click",closeDrawer);
+</script>
+
 </body>
 </html>
