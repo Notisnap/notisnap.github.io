@@ -466,6 +466,88 @@ line-height:1.9;
 
 }
 
+#scrollTopBtn{
+
+position:fixed;
+
+bottom:24px;
+
+right:24px;
+
+width:54px;
+
+height:54px;
+
+border:none;
+
+border-radius:50%;
+
+background:#1c1c1c;
+
+border:1px solid #2a2a2a;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+cursor:pointer;
+
+-webkit-tap-highlight-color:transparent;
+
+tap-highlight-color:transparent;
+
+outline:none;
+
+user-select:none;
+
+-webkit-user-select:none;
+
+opacity:0;
+
+visibility:hidden;
+
+transform:translateY(10px);
+
+transition:.25s ease;
+
+box-shadow:0 8px 24px rgba(0,0,0,.45);
+
+z-index:9999;
+
+}
+
+#scrollTopBtn svg{
+
+filter:drop-shadow(0 0 4px rgba(80,200,120,.65));
+
+}
+
+#scrollTopBtn.show{
+
+opacity:1;
+
+visibility:visible;
+
+transform:translateY(0);
+
+}
+
+#scrollTopBtn:hover{
+
+transform:translateY(-3px);
+
+box-shadow:0 12px 28px rgba(0,0,0,.6);
+
+}
+
+#scrollTopBtn:focus{
+
+outline:none;
+
+}
+
 </style>
 </head>
 
@@ -645,8 +727,10 @@ NotiSnap does not currently provide cloud backup, synchronization, or export fun
 </p>
 </div>
 
+ <section id="support"> 
 <h2>Contact</h2>
-
+ </section>
+  
 <p>
 <a href="mailto:hello.notisnap@gmail.com">
     hello.notisnap@gmail.com
@@ -703,7 +787,60 @@ openDrawer();
 closeBtn.addEventListener("click",closeDrawer);
 
 overlay.addEventListener("click",closeDrawer);
+
+const btn=document.getElementById("scrollTopBtn");
+
+window.addEventListener("scroll",()=>{
+
+if(window.scrollY>300){
+
+btn.classList.add("show");
+
+}
+
+else{
+
+btn.classList.remove("show");
+
+}
+
+});
+
+btn.addEventListener("click",()=>{
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+});
+  
 </script>
+
+<button
+id="scrollTopBtn"
+type="button"
+aria-label="Scroll to top">
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="24"
+height="24"
+viewBox="0 0 24 24"
+fill="none"
+stroke="#50C878"
+stroke-width="2.8"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<polyline points="18 15 12 9 6 15"></polyline>
+
+</svg>
+
+</button>
 
 </body>
 </html>
