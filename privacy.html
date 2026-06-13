@@ -7,14 +7,20 @@
 <title>NotiSnap Privacy Policy</title>
 
 <style>
+  
 body{
 background:#121212;
 color:white;
 font-family:Segoe UI,sans-serif;
-max-width:900px;
-margin:auto;
-padding:0 20px 40px;
+margin:0;
+padding:0;
 line-height:1.8;
+}
+
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:0 20px 40px;
 }
 
 h1{
@@ -123,12 +129,6 @@ color:#50C878;
 
 }
 
-.nav-right a:hover{
-
-color:#50C878;
-
-}
-
 .desktop-nav{
 display:flex;
 }
@@ -168,12 +168,6 @@ min-width:0;
 .nav-right{
 
 margin-left:auto;
-
-}
-
-.hero{
-
-padding:70px 20px 120px;
 
 }
 
@@ -669,6 +663,8 @@ About
 
 </aside>
 
+<div class="container">
+
 <section class="hero-section">
 
 <h1>
@@ -760,7 +756,9 @@ Contact
 <a href="index.html">Back to Home</a>
 </p>
 </section>
-  
+
+</div>
+
 <button
 id="scrollTopBtn"
 type="button"
@@ -832,7 +830,7 @@ const btn=document.getElementById("scrollTopBtn");
 
 window.addEventListener("scroll",()=>{
 
-if(window.scrollY>300){
+if(window.scrollY>100){
 
 btn.classList.add("show");
 
