@@ -548,6 +548,12 @@ outline:none;
 
 }
 
+html{
+
+scroll-behavior:smooth;
+
+}
+
 </style>
 </head>
 
@@ -727,9 +733,13 @@ NotiSnap does not currently provide cloud backup, synchronization, or export fun
 </p>
 </div>
 
- <section id="support"> 
-<h2>Contact</h2>
- </section>
+<section id="support"> 
+<h2>
+
+Contact
+
+</h2>
+</section>
   
 <p>
 <a href="mailto:hello.notisnap@gmail.com">
@@ -742,6 +752,28 @@ NotiSnap does not currently provide cloud backup, synchronization, or export fun
 |
 <a href="index.html">Back to Home</a>
 </p>
+
+<button
+id="scrollTopBtn"
+type="button"
+aria-label="Scroll to top">
+
+<svg
+xmlns="http://www.w3.org/2000/svg"
+width="24"
+height="24"
+viewBox="0 0 24 24"
+fill="none"
+stroke="#50C878"
+stroke-width="2.8"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<polyline points="18 15 12 9 6 15"></polyline>
+
+</svg>
+
+</button>
 
 <script>
 const menuBtn=document.querySelector(".menu-btn");
@@ -819,28 +851,6 @@ behavior:"smooth"
 });
   
 </script>
-
-<button
-id="scrollTopBtn"
-type="button"
-aria-label="Scroll to top">
-
-<svg
-xmlns="http://www.w3.org/2000/svg"
-width="24"
-height="24"
-viewBox="0 0 24 24"
-fill="none"
-stroke="#50C878"
-stroke-width="2.8"
-stroke-linecap="round"
-stroke-linejoin="round">
-
-<polyline points="18 15 12 9 6 15"></polyline>
-
-</svg>
-
-</button>
 
 </body>
 </html>
